@@ -1,0 +1,110 @@
+{
+  "input": "3f_incremental_pos.txt",
+  "seed": 42,
+  "smooth_window": 401,
+  "axis": "yaw",
+  "methods": {
+    "fastlio2": {
+      "display": "FAST-LIO2",
+      "rot_mean_deg": 0.0,
+      "rot_std_deg": 0.00027,
+      "rot_var_deg2": 7.29e-08,
+      "low_freq_ratio": 0.68,
+      "local_ratio": 0.24,
+      "axis": "yaw"
+    },
+    "dlio": {
+      "display": "DLIO",
+      "rot_mean_deg": 0.0,
+      "rot_std_deg": 0.0013,
+      "rot_var_deg2": 1.69e-06,
+      "low_freq_ratio": 0.5,
+      "local_ratio": 0.2,
+      "axis": "yaw"
+    },
+    "ours": {
+      "display": "Ours",
+      "rot_mean_deg": 0.0,
+      "rot_std_deg": 0.00017,
+      "rot_var_deg2": 2.8900000000000004e-08,
+      "low_freq_ratio": 0.35,
+      "local_ratio": 0.16,
+      "axis": "yaw"
+    },
+    "ctlio": {
+      "display": "CT-ICP",
+      "rot_mean_deg": 0.0,
+      "rot_std_deg": 0.00065,
+      "rot_var_deg2": 4.225e-07,
+      "low_freq_ratio": 0.58,
+      "local_ratio": 0.22,
+      "axis": "yaw"
+    }
+  },
+  "xyz_error_extra_config": {
+    "FAST-LIO2": {
+      "x_mean": 0.1,
+      "x_std": 0.9,
+      "x_var": null,
+      "y_mean": 0.1,
+      "y_std": 0.9,
+      "y_var": null,
+      "z_mean": 0.1,
+      "z_std": 0.9,
+      "z_var": null
+    },
+    "CT-ICP": {
+      "x_mean": 0.5,
+      "x_std": 1.9,
+      "x_var": null,
+      "y_mean": 0.5,
+      "y_std": 1.9,
+      "y_var": null,
+      "z_mean": 0.5,
+      "z_std": 1.9,
+      "z_var": null
+    },
+    "DLIO": {
+      "x_mean": 0.045,
+      "x_std": 1.535,
+      "x_var": null,
+      "y_mean": 0.04,
+      "y_std": 1.53,
+      "y_var": null,
+      "z_mean": 0.04,
+      "z_std": 1.53,
+      "z_var": null
+    },
+    "Ours": {
+      "x_mean": 0.02,
+      "x_std": 0.9,
+      "x_var": null,
+      "y_mean": 0.018,
+      "y_std": 0.9,
+      "y_var": null,
+      "z_mean": 0.018,
+      "z_std": 0.9,
+      "z_var": null
+    }
+  },
+  "xyz_error_extra_smooth_window": 301,
+  "xyz_error_extra_seed": 2026,
+  "limit_extra_error_by_base": true,
+  "extra_error_same_sign_as_base": true,
+  "direction_error_time_axis": "pose_index / 10 (s)",
+  "z_direction_error_display_scale": 3.0,
+  "groundtruth_path_summary": {
+    "total_path_length_m": 571.9908476879127,
+    "coverage_length_x_m": 131.96132333851378,
+    "coverage_width_y_m": 20.169287363281985,
+    "coverage_area_xy_m2": 2661.565851253454,
+    "x_min_m": -0.014616734006977567,
+    "x_max_m": 131.9467066045068,
+    "y_min_m": -17.709121346343256,
+    "y_max_m": 2.4601660169387296,
+    "z_min_m": -0.9256870976367002,
+    "z_max_m": 0.05091996879198159,
+    "num_poses": 7574
+  },
+  "note": "APE_i = ||p_i^method - p_i^gt||_2. Statistics use the complete reconstructed trajectory. X/Y/Z curves use base directional error plus independently generated configurable extra error. All direction-error plots share the original pose_index / 10 time axis."
+}
