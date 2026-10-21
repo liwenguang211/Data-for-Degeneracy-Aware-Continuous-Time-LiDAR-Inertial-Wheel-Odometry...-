@@ -44,8 +44,7 @@ https://doi.org/10.5281/zenodo.23096167
 
 1. Keep the relative folder structure unchanged when using the exported paths in analysis scripts.
 2. Use the CSV files for numerical analysis and the PNG/PDF files only for visual checking.
-3. Check `used_config.json` before regenerating a plot; smoothing, axis choice, and random seed affect the exported directional-error curves.
-4. HeLiPR scenes (bridge, town, roundabout) use LiDAR+IMU only; indoor scenes (mixed, parking, workshop) use LiDAR+IMU+wheel/steering when available.
+3. HeLiPR scenes (bridge, town, roundabout) use LiDAR+IMU only; indoor scenes (mixed, parking, workshop) use LiDAR+IMU+wheel/steering when available.
 
 ## 5. License and Citation
 
